@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header{
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: white;
+    display: flex;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase; /* Deixar o titulo com efeito de letra maiuscula*/
+    font-style: italic;
+}
+
+header button{
+    margin-left: 16px;
+}
+
+form{
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2{
+    margin-bottom: 16px;
+}
+
+input, button{
+    padding: 8px;
+}
+
+button{
+    background-color: #009432;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap; /* Quando chegar ao fim da tela criara umka nova linha */
+}
+
+ul li{
+    max-width: 25%; /* Largura maxima das imagens 25% */
+    list-style: none; /* Removendo as bolinhas do "li" */
+    position: relative; /* Fazendo com que o elemento não vaze do layout, por isso o elemento pai (li) recebe esse paramentro */
+    max-height: 280px; /* Altura maxima do li */
+    overflow-y: hidden; /* Todo elemento que passe do limite ele não será exibido (y = posição vertical)*/
+}
+
+ul li img{
+    width: 100%; /* Fazendo com que a imagem ocupe 100% dos 25% da pagina */
+}
+
+.overlay-imagem-link{
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: absolute; /* Posicionando o elemento no canto inferior do "li" */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* removendo a opacidade da imagem  */
+    transition: all ease .8s; /* adicionando uma transição de 0.8 segundos quando passar o mouse sobre a imagem*/
+}
+
+.overlay-imagem-link a{
+    color: white;
+    text-decoration: none; /* removendo a linha em baixo do texto*/
+}
+
+ul li:hover .overlay-imagem-link{
+    opacity: 1; /* Fazendo o texto a baixo da imagem aparecer quando colocamos o mouse sobre ela */
+}
